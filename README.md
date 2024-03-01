@@ -10,7 +10,7 @@ Install gseapy package from bioconda or pip. Follow installation instructions fr
 2. Make necessary changes in the parameter file. Give path for de_file_edgeR NOTE : you can use other DE tool such as DEseq2 output too. Just assign correct column name in the parameter file. 
 3. Execute
 ```
-    python check_libraries_gseapy.py  [This command will save all the libraries from gseapy in a file name library_names_gseapy.csv]
-    python rnaseq_gseapy.py rnaseq_gseapy.params [This will mainly run enrichr overrepresentatin and ranked gsea analysis]
+    python check_libraries_gseapy.py  #This command will save all the libraries from gseapy in a file name library_names_gseapy.csv
+    python rnaseq_gseapy.py rnaseq_gseapy.params #This will mainly run enrichr overrepresentatin and ranked gsea analysis
     
 ```

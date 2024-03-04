@@ -2,7 +2,7 @@ User provided prteome id UP000000589. Downloading the proteome file from uniprot
 
 Uniprot Data downloaded and decompressed successfully, saved as UP000000589_proteome_uniprot_data.tsv
 Background file is created successfully and saved as background.txt
-..Working for upregulated genes Rubicon KO vs WT
+..Working for upregulated genes KO vs WT
 ..Working for individual database KEGG_2019_Mouse
 ..Analysis done
 ..Working for individual database GO_Biological_Process_2023
@@ -27,7 +27,7 @@ ValueError: Warning: No enrich terms when cutoff = 0.05 for GO_Biological_Proces
 9  WikiPathways_2019_Mouse     Hypothetical Network for Drug Addiction WP1246  0.034794  ...    7.273680       24.427368              ACTA1;GRIN2C
 
 [10 rows x 9 columns]
-..Working for downregulated genes Rubicon KO vs WT
+..Working for downregulated genes KO vs WT
 ..Working for individual database KEGG_2019_Mouse
 ..Analysis done
 ..Working for individual database GO_Biological_Process_2023

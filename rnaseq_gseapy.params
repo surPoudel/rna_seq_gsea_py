@@ -5,10 +5,10 @@
 #cab_rnaseq_de         *  /home/spoudel1/.conda/envs/cab_rnaseq_de
 
 # give full path of the normalized file from rnaseq. Currently this program uses voom normalized file. I have not tested it with other. For this pipeline we don't need the normalized file. We just need DE analysis file from edgeR or DEseq2. 
-#voom_normalized_file = /research/groups/greengrp/home/spoudel1/GreenLab_Projects/Joelle/RNAseq_analysis/Rubicon_KO_WT/voom_normalized_data_annot.txt
+#voom_normalized_file = voom_normalized_data_annot.txt
 
 # This is de analysis using edgeR. If you wish to use DEseq or other, change the source code for column names such as P.Value etc. In future I will consider making these changes but now for DEseq2 also use the following column headers geneSymbol      logFC   P.Value adj.P.Val 
-de_file_edgeR = /research/groups/greengrp/home/spoudel1/GreenLab_Projects/Joelle/RNAseq_analysis/Rubicon_KO_WT/RubiconKO_Young_SKO_vs_WT_Young_SKO_diff_annot.txt
+de_file_edgeR = KO_vs_WT_diff_annot.txt
 
 ##pval_col="P.Value", fc_col= "logFC", p_val_cutoff = 0.05, logFC_cutoff=0.58, gene_col="geneSymbol"
 #Definition of DE. For example, I want to use pvalue < 0.05, logFC > 0.58 (1.5 folds). The column in the de file. Usually it is a good practice to use adj.P.Val instead of P.Value but if you do not have many hits with adjusted p value use pvalue only for enrichments. The ranking of genes use all the genes so this may not be relevant if you only use ranked gsea result, which is good in my experience.
@@ -29,10 +29,10 @@ organism = 0
 gene_sets = KEGG_2019_Mouse, GO_Biological_Process_2023, WikiPathways_2019_Mouse
 
 #all the files are stored inside the folders prefixed by save_dir parameters. The upregulated and downregulated folders are different, ranked folders are different etc. 
-save_dir = Young_SKO_Rubicon
+save_dir = KO_vs_WT
 
 # this reflects which comparison was made. For example during edgeR de analysis constrasts order and this should be same. Here Rubicon KO vs WT is an example
-comparison = Rubicon KO vs WT
+comparison = KO vs WT
 
 # this is adjusted p value cutoff during gene enrichment analysis. Sometimes, we may not have any enrichments, you can use cutoff = 1 to see all pathways with all pvalues
 adj_pval_cutoff = 0.05

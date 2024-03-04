@@ -81,8 +81,8 @@ organism = config["gseapy"]["organism"]
 genesets_list = config["gseapy"]["gene_sets"]
 gene_sets = parse_parameters_comma_separate(genesets_list) 
 
-save_dir=config["gseapy"]["save_dir"]#Young_SKO_Rubicon
-comparison=config["gseapy"]["comparison"]#Rubicon KO vs WT
+save_dir=config["gseapy"]["save_dir"]
+comparison=config["gseapy"]["comparison"]
 cutoff=config["gseapy"]["adj_pval_cutoff"]
 #threads=4, minsize=5, maxsize=1000
 #These parameters are for prerank only
@@ -97,7 +97,7 @@ mouse_proteome = "UP000000589"
 
 # read normalized file before DE analysis
 #df = pd.read_csv(voom_normalized_file, delimiter='\t')
-# read DE analysis after comparison with Young Rubicon vs. WT
+# read DE analysis after comparison with WT vs. WT
 df_de = pd.read_csv(de_file_edgeR, delimiter='\t')
 
 logFile = f"{save_dir}_GSEA_py.log"
@@ -166,7 +166,7 @@ write_log (logFile,'Background file is created successfully and saved as backgro
 #degs_up_down(df, pval_col="P.Value", fc_col= "logFC", p_val_cutoff = 0.05, logFC_cutoff=0.58, gene_col="geneSymbol")
 DEGs_up_1d, DEGs_down_1d = degs_up_down(df_de, pval_col=pval_col, fc_col= fc_col, p_val_cutoff = p_val_cutoff, logFC_cutoff=logFC_cutoff, gene_col=gene_col)
 
-"""## Upregulated in Rubicon KO compared to WT"""
+"""## Upregulated in  KO compared to WT"""
 write_log (logFile,f'..Working for upregulated genes {comparison}')
 for set_g in gene_sets:
   write_log (logFile,f'..Working for individual database {set_g}')
@@ -203,7 +203,7 @@ for gset in gene_sets:
   except:
     # print(f'ValueError: Warning: No enrich terms when cutoff = 0.05 for {gset}')
     write_log (logFile,f'ValueError: Warning: No enrich terms when cutoff = 0.05 for {gset}')
-"""## Downregulated in Rubicon KO compared to WT"""
+"""## Downregulated in  KO compared to WT"""
 
 write_log (logFile,f'..Working for downregulated genes {comparison}')
 for set_g in gene_sets:

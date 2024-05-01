@@ -72,7 +72,7 @@ def analyze_plot_gsea(gene_list, gene_set,cutoff=0.05,background="background.txt
   if is_list:
     folder_result = f'{save_dir}_{"_".join(gene_set)}'
   else:
-    folder_result = f'{save_dir}_{gene_set}',
+    folder_result = f'{save_dir}_{gene_set}'
   # check if the gene_set can be changed to either one
   #DEGs_up_1d
   # backgound only reconigized a gene list input.
